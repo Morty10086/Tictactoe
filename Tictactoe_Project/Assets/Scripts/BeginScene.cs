@@ -8,6 +8,7 @@ public class BeginScene : MonoBehaviour
 {
     // Start is called before the first frame update
     public Button startBtn;
+    public Button quitBtn;
     public Button easyBtn;
     public Button midBtn;
     public Button hardBtn;
@@ -16,6 +17,9 @@ public class BeginScene : MonoBehaviour
     {
         startBtn.onClick.AddListener(()=>{
             diffDegreePanel.SetActive(true);
+        });
+        quitBtn.onClick.AddListener(()=>{
+           Application.Quit();
         });
         easyBtn.onClick.AddListener(()=>{
             DiffDegreeData.Instance.diffDegree=1;
